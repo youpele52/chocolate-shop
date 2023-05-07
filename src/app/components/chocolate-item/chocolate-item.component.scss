@@ -1,0 +1,25 @@
+.item {
+  width: 210px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem 0;
+  text-align: center;
+
+  img {
+    height: 250px;
+    width: 207px;
+  }
+
+  figcaption {
+    margin-top: 1rem;
+
+    .name {
+      text-transform: uppercase;
+    }
+    .brand {
+      font-weight: bolder;
+    }
+  }
+}

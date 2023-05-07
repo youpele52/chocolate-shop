@@ -1,0 +1,16 @@
+<button
+  class="btn"
+  [ngClass]="usage ? usage : 'primary'"
+  *ngIf="htmlTag === 'button-tag'"
+>
+  {{ text }}
+</button>
+<a
+  class="btn"
+  [ngClass]="usage ? usage : 'primary'"
+  *ngIf="htmlTag === 'a-tag'"
+  href="{{ href }}"
+  target="_blank"
+  rel="noopener"
+  >{{ text }}</a
+>

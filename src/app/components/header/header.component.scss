@@ -1,0 +1,47 @@
+@import "../../../styles.scss";
+
+header {
+  height: 15rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2rem 0;
+  .logo-container {
+    width: 100%;
+    height: max-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 1.5rem 0;
+    .logo {
+      font-size: 3rem;
+      font-family: "Monoton", cursive;
+    }
+    .founded {
+      margin: 1rem 0;
+      font-size: smaller;
+      text-transform: uppercase;
+      gap: 2px;
+    }
+    .dot {
+      height: 3px;
+      width: 3px;
+      background-color: $primary-color;
+      border-radius: 50%;
+    }
+  }
+
+  nav {
+    gap: 5rem;
+    font-size: 1rem;
+    a{
+      text-transform: uppercase;
+    }
+  }
+
+  a {
+    text-decoration: none;
+    color: $primary-color;
+  }
+}

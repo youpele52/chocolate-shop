@@ -1,0 +1,17 @@
+<div class="price">
+  <div *ngIf="averagePricePer100g">
+    Average Price: € {{ averagePricePer100g }}
+  </div>
+  <div *ngIf="lowestPricePer100g">
+    Lowest Price: € {{ lowestPricePer100g.price }}
+  </div>
+  <app-button
+    *ngIf="lowestPricePer100g"
+    htmlTag="a-tag"
+    usage="primary"
+    text="{{ 'Buy' }}"
+    href="{{ lowestPricePer100g.link }}"
+  ></app-button>
+
+  <!-- <a *ngIf="lowestPricePer100g" href="{{ lowestPricePer100g.link }}">Link</a> -->
+</div>
