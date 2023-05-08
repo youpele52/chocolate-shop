@@ -8,7 +8,7 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The appli
 
 ## Mock backend server
 
-Run `npm run server`. The mock backend server will run at ` http://localhost:4000`
+Run `npm run server`. The mock backend server will run at ` http://localhost:5000`
 
 ## Code scaffolding
 
