@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { getRandomInt, imageLinks } from 'src/app/utils/helpers';
 import { ChocolateData } from 'src/type';
 
 @Component({
@@ -8,4 +9,9 @@ import { ChocolateData } from 'src/type';
 })
 export class ChocolateItemComponent {
   @Input() chocolate: ChocolateData | undefined;
+  image: string | undefined;
+
+  ngOnInit() {
+    this.image = imageLinks[getRandomInt(10)];
+  }
 }
