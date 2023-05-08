@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { BehaviorSubject, Observable } from 'rxjs';
 import { ChocolateData } from 'src/type';
 
 const httpOptions = {
@@ -15,8 +15,20 @@ const httpOptions = {
 export class ChocolateService {
   private apiUrl = 'http://localhost:5000/data';
   constructor(private http: HttpClient) {}
+  private chocolatesSubject = new BehaviorSubject<ChocolateData[]>([]);
 
   getChocolateData(): Observable<ChocolateData[]> {
-    return this.http.get<ChocolateData[]>(this.apiUrl);
+    // check if chocolate already exist
+    const chocolates = this.chocolatesSubject.getValue();
+
+    if (chocolates.length > 0) {
+      return this.chocolatesSubject.asObservable();
+    } else {
+      // return this.http.get<ChocolateData[]>(this.apiUrl);
+      this.http.get<ChocolateData[]>(this.apiUrl).subscribe((chocolates) => {
+        this.chocolatesSubject.next(chocolates);
+      });
+      return this.chocolatesSubject.asObservable();
+    }
   }
 }

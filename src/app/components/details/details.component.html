@@ -1,1 +1,38 @@
-<p>details works!</p>
+<main class="page-main" *ngIf="chocolate">
+  <div class="image flex-center">
+    <img
+      src="https://images.unsplash.com/photo-1526081715791-7c538f86060e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2340&q=80"
+      alt=""
+    />
+  </div>
+  <div class="detail">
+    <h1>
+      {{ chocolate.name }}
+    </h1>
+
+    <p>{{ chocolate.brand }}</p>
+    <table *ngIf="pricesData">
+      <thead>
+        <tr>
+          <th>Shop link</th>
+          <th>Price</th>
+          <th>Amount</th>
+          <th>Unit</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let price of pricesData">
+          <td class="link">
+            <a href="{{ price.link }}" target="_blank" rel="noopener">
+              {{ price.shop }}</a
+            >
+          </td>
+          <td>€ {{ price.price }}</td>
+          <td>{{ price.amount }}</td>
+          <td>{{ price.unit }}</td>
+        </tr>
+      </tbody>
+    </table>
+    <app-pie-chart [nutrition]="chocolate.nutrition"></app-pie-chart>
+  </div>
+</main>

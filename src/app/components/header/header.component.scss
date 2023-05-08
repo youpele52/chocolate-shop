@@ -33,10 +33,19 @@ header {
   }
 
   nav {
-    gap: 5rem;
+    gap: 3rem;
     font-size: 1rem;
-    a{
+    .dot {
+      height: 5px;
+      width: 5px;
+      background-color: $primary-color;
+      border-radius: 50%;
+    }
+    a {
       text-transform: uppercase;
+    }
+    a:hover {
+      text-decoration: underline;
     }
   }
 

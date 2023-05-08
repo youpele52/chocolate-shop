@@ -16,6 +16,7 @@ import { ChocolateItemPriceComponent } from './components/chocolate-item-price/c
 import { ButtonComponent } from './components/button/button.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import { PieChartComponent } from './components/pie-chart/pie-chart.component';
 
 const appRoutes: Routes = [
   {
@@ -39,6 +40,7 @@ const appRoutes: Routes = [
     ChocolateListComponent,
     ChocolateItemPriceComponent,
     ButtonComponent,
+    PieChartComponent,
   ],
   imports: [
     BrowserModule,

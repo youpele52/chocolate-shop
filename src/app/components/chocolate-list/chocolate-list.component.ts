@@ -11,7 +11,6 @@ export class ChocolateListComponent {
   chocolates: ChocolateData[] = [];
 
   constructor(private chocolateService: ChocolateService) {}
-
   ngOnInit(): void {
     this.chocolateService
       .getChocolateData()

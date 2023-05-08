@@ -1,3 +1,52 @@
+@import "../../../styles.scss";
+
 main {
-  min-height: calc(100vh - 100px - 100px);
+  .gift {
+    height: 500px;
+    width: 100%;
+    margin-bottom: 4rem;
+    // background-color: rgb(253, 219, 212);
+    background-image: linear-gradient(
+      to bottom,
+      #ffe9e1,
+      #ffe6dd,
+      #fee2da,
+      #fedfd7,
+      #fddbd4
+    );
+    display: flex;
+    justify-content: space-between;
+    img {
+      height: 500px;
+    }
+    div {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 0 3rem;
+      gap: 1rem;
+      h2 {
+        text-transform: uppercase;
+        font-size: 3rem;
+      }
+    }
+  }
+  .popular-products {
+    header {
+      width: 100%;
+      flex-direction: column;
+
+      h1 {
+        flex-direction: column;
+        width: fit-content;
+        font-size: 1.1rem;
+        font-weight: 700;
+        letter-spacing: 5px;
+        text-transform: uppercase;
+      }
+      p {
+        text-transform: lowercase;
+      }
+    }
+  }
 }

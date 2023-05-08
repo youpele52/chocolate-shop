@@ -1,7 +1,26 @@
-<main>
-  <h1>overview works!</h1>
-  <p>overview works!</p>
-  <app-button  htmlTag="button-tag"  text="{{'button here'}}"></app-button>
-  <app-button  htmlTag="a-tag" usage="secondary" text="{{'a tag here'}}"></app-button>
-  <app-chocolate-list></app-chocolate-list>
+<main class="page-main">
+  <section class="gift">
+    <div class="flex-center">
+      <h2>Mother's Day Gift</h2>
+      <p>Discover the most delicious chocolate gift ideas for Mother's Day.</p>
+      <app-button htmlTag="button-tag" text="{{ 'Discover!' }}"></app-button>
+    </div>
+    <img src="./assets/gift.png" alt="" />
+  </section>
+  <section class="popular-products">
+    <header class="flex-center">
+      <h1 class="flex-center">
+        Popular Products
+        <div class="underline"></div>
+      </h1>
+      <p>Price per 100g*</p>
+    </header>
+    <!-- <app-button htmlTag="button-tag" text="{{ 'button here' }}"></app-button>
+    <app-button
+      htmlTag="a-tag"
+      usage="secondary"
+      text="{{ 'a tag here' }}"
+    ></app-button> -->
+    <app-chocolate-list></app-chocolate-list>
+  </section>
 </main>
