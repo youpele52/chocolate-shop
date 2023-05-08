@@ -2,7 +2,10 @@ import { Component } from '@angular/core';
 import { ChocolateData } from 'src/type';
 import { ChocolateService } from 'src/app/services/chocolate.service';
 import { ActivatedRoute, Router } from '@angular/router';
-import { getRandomInt, imageLinks } from 'src/app/utils/helpers';
+import { imageLinks } from 'src/app/utils/helpers';
+import { MatDialog, MatDialogRef } from '@angular/material/dialog';
+import { DialogComponent } from '../dialog/dialog.component';
+
 @Component({
   selector: 'app-details',
   templateUrl: './details.component.html',
@@ -20,10 +23,9 @@ export class DetailsComponent {
   image: string | undefined;
 
   ngOnInit(): void {
-    this.image = imageLinks[getRandomInt(10)];
-
     this.route.queryParams.subscribe((params) => {
       const id = params['id'];
+      this.image = imageLinks[+id - 1];
       this.chocolateService.getChocolateData().subscribe((chocolates) => {
         this.chocolate = chocolates.find((chocolate) => chocolate.id == id);
         this.pricesData = chocolates.find(
