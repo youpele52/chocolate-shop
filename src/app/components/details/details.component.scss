@@ -5,6 +5,7 @@ main {
   display: grid;
   grid-template-columns: 1fr 1fr;
   padding: 2rem;
+  
   .image {
     align-items: flex-start;
     img {
