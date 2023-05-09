@@ -10,11 +10,11 @@ First, run `npm install` on the terminal to install the libraries and the depend
 
 ### Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Run `ng serve` for a dev server. Navigate to [http://localhost:4200/](http://localhost:4200/). The application will automatically reload if you change any of the source files.
 
 ### Mock backend server
 
-Run `npm run server`. The mock backend server will run at ` http://localhost:5000`
+Run `npm run server`. The mock backend server will run at [http://localhost:5000](http://localhost:5000)
 
 ## Build
 
